@@ -1,0 +1,263 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "input": {
+      "value": {
+        "kind": "policysetdefinitions",
+        "location": "global",
+        "name": "Enforce-Guardrails-KeyVault",
+        "properties": {
+          "description": "Enforce recommended guardrails for Azure Key Vault.",
+          "displayName": "Enforce recommended guardrails for Azure Key Vault",
+          "metadata": {
+            "alzCloudEnvironments": [
+              "AzureCloud",
+              "AzureChinaCloud",
+              "AzureUSGovernment"
+            ],
+            "category": "Key Vault",
+            "source": "https://github.com/Azure/Enterprise-Scale/",
+            "version": "1.0.0"
+          },
+          "parameters": {
+            "effectKvCertLifetime": {
+              "allowedValues": [
+                "audit",
+                "Audit",
+                "deny",
+                "Deny",
+                "disabled",
+                "Disabled"
+              ],
+              "defaultValue": "Audit",
+              "metadata": {
+                "description": "Enable or disable the execution of the policy",
+                "displayName": "Effect"
+              },
+              "type": "String"
+            },
+            "effectKvFirewallEnabled": {
+              "allowedValues": [
+                "Audit",
+                "Deny",
+                "Disabled"
+              ],
+              "defaultValue": "Audit",
+              "metadata": {
+                "description": "Enable or disable the execution of the policy",
+                "displayName": "Effect"
+              },
+              "type": "String"
+            },
+            "effectKvKeysExpire": {
+              "allowedValues": [
+                "Audit",
+                "Deny",
+                "Disabled"
+              ],
+              "defaultValue": "Audit",
+              "metadata": {
+                "description": "Enable or disable the execution of the policy",
+                "displayName": "Effect"
+              },
+              "type": "String"
+            },
+            "effectKvKeysLifetime": {
+              "allowedValues": [
+                "Audit",
+                "Deny",
+                "Disabled"
+              ],
+              "defaultValue": "Audit",
+              "metadata": {
+                "description": "Enable or disable the execution of the policy",
+                "displayName": "Effect"
+              },
+              "type": "String"
+            },
+            "effectKvPurgeProtection": {
+              "allowedValues": [
+                "Audit",
+                "Deny",
+                "Disabled"
+              ],
+              "defaultValue": "Deny",
+              "metadata": {
+                "description": "Enable or disable the execution of the policy",
+                "displayName": "Effect"
+              },
+              "type": "String"
+            },
+            "effectKvSecretsExpire": {
+              "allowedValues": [
+                "Audit",
+                "Deny",
+                "Disabled"
+              ],
+              "defaultValue": "Audit",
+              "metadata": {
+                "description": "Enable or disable the execution of the policy",
+                "displayName": "Effect"
+              },
+              "type": "String"
+            },
+            "effectKvSecretsLifetime": {
+              "allowedValues": [
+                "Audit",
+                "Deny",
+                "Disabled"
+              ],
+              "defaultValue": "Audit",
+              "metadata": {
+                "description": "Enable or disable the execution of the policy",
+                "displayName": "Effect"
+              },
+              "type": "String"
+            },
+            "effectKvSoftDelete": {
+              "allowedValues": [
+                "Audit",
+                "Deny",
+                "Disabled"
+              ],
+              "defaultValue": "Deny",
+              "metadata": {
+                "description": "Enable or disable the execution of the policy",
+                "displayName": "Effect"
+              },
+              "type": "String"
+            },
+            "maximumCertLifePercentageLife": {
+              "defaultValue": 80,
+              "metadata": {
+                "description": "Enter the percentage of lifetime of the certificate when you want to trigger the policy action. For example, to trigger a policy action at 80% of the certificate's valid life, enter '80'.",
+                "displayName": "The maximum lifetime percentage"
+              },
+              "type": "Integer"
+            },
+            "minimumCertLifeDaysBeforeExpiry": {
+              "defaultValue": 90,
+              "metadata": {
+                "description": "Enter the days before expiration of the certificate when you want to trigger the policy action. For example, to trigger a policy action 90 days before the certificate's expiration, enter '90'.",
+                "displayName": "The minimum days before expiry"
+              },
+              "type": "Integer"
+            },
+            "minimumKeysLifeDaysBeforeExpiry": {
+              "defaultValue": 90,
+              "metadata": {
+                "description": "Enter the days before expiration of the certificate when you want to trigger the policy action. For example, to trigger a policy action 90 days before the certificate's expiration, enter '90'.",
+                "displayName": "The minimum days before expiry"
+              },
+              "type": "Integer"
+            },
+            "minimumSecretsLifeDaysBeforeExpiry": {
+              "defaultValue": 90,
+              "metadata": {
+                "description": "Enter the days before expiration of the certificate when you want to trigger the policy action. For example, to trigger a policy action 90 days before the certificate's expiration, enter '90'.",
+                "displayName": "The minimum days before expiry"
+              },
+              "type": "Integer"
+            }
+          },
+          "policyDefinitions": [
+            {
+              "groupNames": [],
+              "parameters": {
+                "effect": {
+                  "value": "[parameters('effectKvSoftDelete')]"
+                }
+              },
+              "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/1e66c121-a66a-4b1f-9b83-0fd99bf0fc2d",
+              "policyDefinitionReferenceId": "KvSoftDelete"
+            },
+            {
+              "groupNames": [],
+              "parameters": {
+                "effect": {
+                  "value": "[parameters('effectKvPurgeProtection')]"
+                }
+              },
+              "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/0b60c0b2-2dc2-4e1c-b5c9-abbed971de53",
+              "policyDefinitionReferenceId": "KvPurgeProtection"
+            },
+            {
+              "groupNames": [],
+              "parameters": {
+                "effect": {
+                  "value": "[parameters('effectKvSecretsExpire')]"
+                }
+              },
+              "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/98728c90-32c7-4049-8429-847dc0f4fe37",
+              "policyDefinitionReferenceId": "KvSecretsExpire"
+            },
+            {
+              "groupNames": [],
+              "parameters": {
+                "effect": {
+                  "value": "[parameters('effectKvKeysExpire')]"
+                }
+              },
+              "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/152b15f7-8e1f-4c1f-ab71-8c010ba5dbc0",
+              "policyDefinitionReferenceId": "KvKeysExpire"
+            },
+            {
+              "groupNames": [],
+              "parameters": {
+                "effect": {
+                  "value": "[parameters('effectKvFirewallEnabled')]"
+                }
+              },
+              "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/55615ac9-af46-4a59-874e-391cc3dfb490",
+              "policyDefinitionReferenceId": "KvFirewallEnabled"
+            },
+            {
+              "groupNames": [],
+              "parameters": {
+                "effect": {
+                  "value": "[parameters('effectKvCertLifetime')]"
+                },
+                "maximumPercentageLife": {
+                  "value": "[parameters('maximumCertLifePercentageLife')]"
+                },
+                "minimumDaysBeforeExpiry": {
+                  "value": "[parameters('minimumCertLifeDaysBeforeExpiry')]"
+                }
+              },
+              "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/12ef42cb-9903-4e39-9c26-422d29570417",
+              "policyDefinitionReferenceId": "KvCertLifetime"
+            },
+            {
+              "groupNames": [],
+              "parameters": {
+                "effect": {
+                  "value": "[parameters('effectKvKeysLifetime')]"
+                },
+                "minimumDaysBeforeExpiration": {
+                  "value": "[parameters('minimumKeysLifeDaysBeforeExpiry')]"
+                }
+              },
+              "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/5ff38825-c5d8-47c5-b70e-069a21955146",
+              "policyDefinitionReferenceId": "KvKeysLifetime"
+            },
+            {
+              "groupNames": [],
+              "parameters": {
+                "effect": {
+                  "value": "[parameters('effectKvSecretsLifetime')]"
+                },
+                "minimumDaysBeforeExpiration": {
+                  "value": "[parameters('minimumSecretsLifeDaysBeforeExpiry')]"
+                }
+              },
+              "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/b0eb591a-5e70-4534-a8bf-04b9c489584a",
+              "policyDefinitionReferenceId": "KvSecretsLifetime"
+            }
+          ]
+        },
+        "type": "Microsoft.Authorization/policySetDefinitions"
+      }
+    }
+  }
+}

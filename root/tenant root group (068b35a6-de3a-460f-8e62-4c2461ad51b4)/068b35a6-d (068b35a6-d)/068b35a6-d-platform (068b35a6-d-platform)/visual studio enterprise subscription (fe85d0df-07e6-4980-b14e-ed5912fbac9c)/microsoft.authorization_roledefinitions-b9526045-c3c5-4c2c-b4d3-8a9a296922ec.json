@@ -1,0 +1,46 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "metadata": {
+    "_generator": {
+      "name": "AzOps"
+    }
+  },
+  "parameters": {},
+  "variables": {},
+  "resources": [
+    {
+      "type": "Microsoft.Authorization/roleDefinitions",
+      "name": "b9526045-c3c5-4c2c-b4d3-8a9a296922ec",
+      "apiVersion": "2022-05-01-preview",
+      "properties": {
+        "assignableScopes": [
+          "/subscriptions/fe85d0df-07e6-4980-b14e-ed5912fbac9c"
+        ],
+        "description": "Can monitor and restart virtual machines.",
+        "permissions": [
+          {
+            "actions": [
+              "Microsoft.Storage/*/read",
+              "Microsoft.Network/*/read",
+              "Microsoft.Compute/*/read",
+              "Microsoft.Compute/virtualMachines/start/action",
+              "Microsoft.Compute/virtualMachines/restart/action",
+              "Microsoft.Authorization/*/read",
+              "Microsoft.ResourceHealth/availabilityStatuses/read",
+              "Microsoft.Resources/subscriptions/resourceGroups/read",
+              "Microsoft.Insights/alertRules/*",
+              "Microsoft.Support/*"
+            ],
+            "dataActions": [],
+            "notActions": [],
+            "notDataActions": []
+          }
+        ],
+        "roleName": "Virtual Machine Operator",
+        "type": "CustomRole"
+      }
+    }
+  ],
+  "outputs": {}
+}
