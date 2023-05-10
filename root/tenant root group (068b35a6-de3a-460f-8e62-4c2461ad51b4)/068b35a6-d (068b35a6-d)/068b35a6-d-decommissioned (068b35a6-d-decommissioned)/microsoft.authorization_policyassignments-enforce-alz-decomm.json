@@ -1,0 +1,52 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "metadata": {
+    "_generator": {
+      "name": "AzOps"
+    }
+  },
+  "parameters": {},
+  "variables": {},
+  "resources": [
+    {
+      "type": "Microsoft.Authorization/policyAssignments",
+      "name": "Enforce-ALZ-Decomm",
+      "kind": "policyassignments",
+      "apiVersion": "2022-06-01",
+      "location": "westeurope",
+      "identity": {
+        "principalId": "9deaa028-3064-4fc3-84ff-bc2baea785f6",
+        "tenantId": "068b35a6-de3a-460f-8e62-4c2461ad51b4",
+        "type": "SystemAssigned"
+      },
+      "properties": {
+        "description": "This initiative will help enforce and govern subscriptions that are placed within the decommissioned Management Group as part of your Subscription decommissioning process. See https://aka.ms/alz/policies for more information.",
+        "displayName": "Enforce ALZ Decommissioned Guardrails",
+        "enforcementMode": "Default",
+        "metadata": {},
+        "parameters": {
+          "listOfResourceTypesAllowed": {
+            "value": [
+              "microsoft.consumption/tags",
+              "microsoft.authorization/roleassignments",
+              "microsoft.authorization/roledefinitions",
+              "microsoft.authorization/policyassignments",
+              "microsoft.authorization/locks",
+              "microsoft.authorization/policydefinitions",
+              "microsoft.authorization/policysetdefinitions",
+              "microsoft.resources/tags",
+              "microsoft.authorization/roleeligibilityschedules",
+              "microsoft.authorization/roleeligibilityscheduleinstances",
+              "microsoft.authorization/roleassignmentschedules",
+              "microsoft.authorization/roleassignmentscheduleinstances"
+            ]
+          }
+        },
+        "policyDefinitionId": "/providers/Microsoft.Management/managementGroups/068b35a6-d/providers/Microsoft.Authorization/policySetDefinitions/Enforce-ALZ-Decomm",
+        "scope": "/providers/Microsoft.Management/managementGroups/068b35a6-d-decommissioned"
+      }
+    }
+  ],
+  "outputs": {}
+}

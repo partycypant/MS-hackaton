@@ -1,0 +1,59 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "metadata": {
+    "_generator": {
+      "name": "AzOps"
+    }
+  },
+  "parameters": {},
+  "variables": {},
+  "resources": [
+    {
+      "type": "Microsoft.Authorization/policyAssignments",
+      "name": "Deploy-Log-Analytics",
+      "kind": "policyassignments",
+      "apiVersion": "2022-06-01",
+      "location": "westeurope",
+      "identity": {
+        "principalId": "fc51bda9-2353-445d-af4f-241d55b8702a",
+        "tenantId": "068b35a6-de3a-460f-8e62-4c2461ad51b4",
+        "type": "SystemAssigned"
+      },
+      "properties": {
+        "description": "Deploy resource group containing Log Analytics workspace and linked automation account to centralize logs and monitoring. The automation account is aprerequisite for solutions like Updates and Change Tracking.",
+        "displayName": "Configure Log Analytics workspace and automation account to centralize logs and monitoring",
+        "enforcementMode": "Default",
+        "metadata": {},
+        "nonComplianceMessages": [
+          {
+            "message": "Log Analytics workspace and automation account must be configured to centralize logs and monitoring."
+          }
+        ],
+        "parameters": {
+          "automationAccountName": {
+            "value": "068b35a6-d-aauto"
+          },
+          "automationRegion": {
+            "value": "westeurope"
+          },
+          "dataRetention": {
+            "value": "30"
+          },
+          "rgName": {
+            "value": "068b35a6-d-mgmt"
+          },
+          "workspaceName": {
+            "value": "068b35a6-d-law"
+          },
+          "workspaceRegion": {
+            "value": "westeurope"
+          }
+        },
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/8e3e61b3-0b32-22d5-4edf-55f87fdb5955",
+        "scope": "/providers/Microsoft.Management/managementGroups/068b35a6-d-platform"
+      }
+    }
+  ],
+  "outputs": {}
+}
