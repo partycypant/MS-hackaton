@@ -19,7 +19,7 @@
             "version": "2.0.0"
           },
           "parameters": {
-            "aciLogAnalyticsEffect": {
+            "ACILogAnalyticsEffect": {
               "allowedValues": [
                 "DeployIfNotExists",
                 "Disabled"
@@ -31,7 +31,7 @@
               },
               "type": "String"
             },
-            "acrLogAnalyticsEffect": {
+            "ACRLogAnalyticsEffect": {
               "allowedValues": [
                 "DeployIfNotExists",
                 "Disabled"
@@ -43,7 +43,7 @@
               },
               "type": "String"
             },
-            "aksLogAnalyticsEffect": {
+            "AKSLogAnalyticsEffect": {
               "allowedValues": [
                 "DeployIfNotExists",
                 "Disabled"
@@ -55,31 +55,7 @@
               },
               "type": "String"
             },
-            "analysisServiceLogAnalyticsEffect": {
-              "allowedValues": [
-                "DeployIfNotExists",
-                "Disabled"
-              ],
-              "defaultValue": "DeployIfNotExists",
-              "metadata": {
-                "description": "Deploys the diagnostic settings for Analysis Services to stream to a Log Analytics workspace when any Analysis Services which is missing this diagnostic settings is created or updated. The Policy will set the diagnostic with all metrics and category enabled",
-                "displayName": "Deploy Diagnostic Settings for Analysis Services to Log Analytics workspace"
-              },
-              "type": "String"
-            },
-            "apIforFHIRLogAnalyticsEffect": {
-              "allowedValues": [
-                "DeployIfNotExists",
-                "Disabled"
-              ],
-              "defaultValue": "DeployIfNotExists",
-              "metadata": {
-                "description": "Deploys the diagnostic settings for Azure API for FHIR to stream to a Log Analytics workspace when any Azure API for FHIR which is missing this diagnostic settings is created or updated. The Policy will set the diagnostic with all metrics and category enabled",
-                "displayName": "Deploy Diagnostic Settings for Azure API for FHIR to Log Analytics workspace"
-              },
-              "type": "String"
-            },
-            "apiMgmtLogAnalyticsEffect": {
+            "APIMgmtLogAnalyticsEffect": {
               "allowedValues": [
                 "DeployIfNotExists",
                 "Disabled"
@@ -91,55 +67,19 @@
               },
               "type": "String"
             },
-            "appServiceLogAnalyticsEffect": {
+            "APIforFHIRLogAnalyticsEffect": {
               "allowedValues": [
                 "DeployIfNotExists",
                 "Disabled"
               ],
               "defaultValue": "DeployIfNotExists",
               "metadata": {
-                "description": "Deploys the diagnostic settings for App Service Plan to stream to a Log Analytics workspace when any App Service Plan which is missing this diagnostic settings is created or updated. The Policy will set the diagnostic with all metrics and category enabled",
-                "displayName": "Deploy Diagnostic Settings for App Service Plan to Log Analytics workspace"
+                "description": "Deploys the diagnostic settings for Azure API for FHIR to stream to a Log Analytics workspace when any Azure API for FHIR which is missing this diagnostic settings is created or updated. The Policy will set the diagnostic with all metrics and category enabled",
+                "displayName": "Deploy Diagnostic Settings for Azure API for FHIR to Log Analytics workspace"
               },
               "type": "String"
             },
-            "appServiceWebappLogAnalyticsEffect": {
-              "allowedValues": [
-                "DeployIfNotExists",
-                "Disabled"
-              ],
-              "defaultValue": "DeployIfNotExists",
-              "metadata": {
-                "description": "Deploys the diagnostic settings for Web App to stream to a Log Analytics workspace when any Web App which is missing this diagnostic settings is created or updated. The Policy will set the diagnostic with all metrics and category enabled",
-                "displayName": "Deploy Diagnostic Settings for App Service to Log Analytics workspace"
-              },
-              "type": "String"
-            },
-            "applicationGatewayLogAnalyticsEffect": {
-              "allowedValues": [
-                "DeployIfNotExists",
-                "Disabled"
-              ],
-              "defaultValue": "DeployIfNotExists",
-              "metadata": {
-                "description": "Deploys the diagnostic settings for Application Gateway to stream to a Log Analytics workspace when any Application Gateway which is missing this diagnostic settings is created or updated. The Policy will set the diagnostic with all metrics and category enabled",
-                "displayName": "Deploy Diagnostic Settings for Application Gateway to Log Analytics workspace"
-              },
-              "type": "String"
-            },
-            "automationLogAnalyticsEffect": {
-              "allowedValues": [
-                "DeployIfNotExists",
-                "Disabled"
-              ],
-              "defaultValue": "DeployIfNotExists",
-              "metadata": {
-                "description": "Deploys the diagnostic settings for Automation to stream to a Log Analytics workspace when any Automation which is missing this diagnostic settings is created or updated. The Policy will set the diagnostic with all metrics and category enabled",
-                "displayName": "Deploy Diagnostic Settings for Automation to Log Analytics workspace"
-              },
-              "type": "String"
-            },
-            "avdScalingPlansLogAnalyticsEffect": {
+            "AVDScalingPlansLogAnalyticsEffect": {
               "allowedValues": [
                 "DeployIfNotExists",
                 "Disabled"
@@ -151,7 +91,67 @@
               },
               "type": "String"
             },
-            "bastionLogAnalyticsEffect": {
+            "AnalysisServiceLogAnalyticsEffect": {
+              "allowedValues": [
+                "DeployIfNotExists",
+                "Disabled"
+              ],
+              "defaultValue": "DeployIfNotExists",
+              "metadata": {
+                "description": "Deploys the diagnostic settings for Analysis Services to stream to a Log Analytics workspace when any Analysis Services which is missing this diagnostic settings is created or updated. The Policy will set the diagnostic with all metrics and category enabled",
+                "displayName": "Deploy Diagnostic Settings for Analysis Services to Log Analytics workspace"
+              },
+              "type": "String"
+            },
+            "AppServiceLogAnalyticsEffect": {
+              "allowedValues": [
+                "DeployIfNotExists",
+                "Disabled"
+              ],
+              "defaultValue": "DeployIfNotExists",
+              "metadata": {
+                "description": "Deploys the diagnostic settings for App Service Plan to stream to a Log Analytics workspace when any App Service Plan which is missing this diagnostic settings is created or updated. The Policy will set the diagnostic with all metrics and category enabled",
+                "displayName": "Deploy Diagnostic Settings for App Service Plan to Log Analytics workspace"
+              },
+              "type": "String"
+            },
+            "AppServiceWebappLogAnalyticsEffect": {
+              "allowedValues": [
+                "DeployIfNotExists",
+                "Disabled"
+              ],
+              "defaultValue": "DeployIfNotExists",
+              "metadata": {
+                "description": "Deploys the diagnostic settings for Web App to stream to a Log Analytics workspace when any Web App which is missing this diagnostic settings is created or updated. The Policy will set the diagnostic with all metrics and category enabled",
+                "displayName": "Deploy Diagnostic Settings for App Service to Log Analytics workspace"
+              },
+              "type": "String"
+            },
+            "ApplicationGatewayLogAnalyticsEffect": {
+              "allowedValues": [
+                "DeployIfNotExists",
+                "Disabled"
+              ],
+              "defaultValue": "DeployIfNotExists",
+              "metadata": {
+                "description": "Deploys the diagnostic settings for Application Gateway to stream to a Log Analytics workspace when any Application Gateway which is missing this diagnostic settings is created or updated. The Policy will set the diagnostic with all metrics and category enabled",
+                "displayName": "Deploy Diagnostic Settings for Application Gateway to Log Analytics workspace"
+              },
+              "type": "String"
+            },
+            "AutomationLogAnalyticsEffect": {
+              "allowedValues": [
+                "DeployIfNotExists",
+                "Disabled"
+              ],
+              "defaultValue": "DeployIfNotExists",
+              "metadata": {
+                "description": "Deploys the diagnostic settings for Automation to stream to a Log Analytics workspace when any Automation which is missing this diagnostic settings is created or updated. The Policy will set the diagnostic with all metrics and category enabled",
+                "displayName": "Deploy Diagnostic Settings for Automation to Log Analytics workspace"
+              },
+              "type": "String"
+            },
+            "BastionLogAnalyticsEffect": {
               "allowedValues": [
                 "DeployIfNotExists",
                 "Disabled"
@@ -163,7 +163,7 @@
               },
               "type": "String"
             },
-            "batchLogAnalyticsEffect": {
+            "BatchLogAnalyticsEffect": {
               "allowedValues": [
                 "DeployIfNotExists",
                 "Disabled"
@@ -175,7 +175,7 @@
               },
               "type": "String"
             },
-            "cdnEndpointsLogAnalyticsEffect": {
+            "CDNEndpointsLogAnalyticsEffect": {
               "allowedValues": [
                 "DeployIfNotExists",
                 "Disabled"
@@ -187,7 +187,7 @@
               },
               "type": "String"
             },
-            "cognitiveServicesLogAnalyticsEffect": {
+            "CognitiveServicesLogAnalyticsEffect": {
               "allowedValues": [
                 "DeployIfNotExists",
                 "Disabled"
@@ -199,7 +199,7 @@
               },
               "type": "String"
             },
-            "cosmosLogAnalyticsEffect": {
+            "CosmosLogAnalyticsEffect": {
               "allowedValues": [
                 "DeployIfNotExists",
                 "Disabled"
@@ -211,7 +211,7 @@
               },
               "type": "String"
             },
-            "dataExplorerClusterLogAnalyticsEffect": {
+            "DataExplorerClusterLogAnalyticsEffect": {
               "allowedValues": [
                 "DeployIfNotExists",
                 "Disabled"
@@ -223,7 +223,7 @@
               },
               "type": "String"
             },
-            "dataFactoryLogAnalyticsEffect": {
+            "DataFactoryLogAnalyticsEffect": {
               "allowedValues": [
                 "DeployIfNotExists",
                 "Disabled"
@@ -235,7 +235,7 @@
               },
               "type": "String"
             },
-            "dataLakeAnalyticsLogAnalyticsEffect": {
+            "DataLakeAnalyticsLogAnalyticsEffect": {
               "allowedValues": [
                 "DeployIfNotExists",
                 "Disabled"
@@ -247,7 +247,7 @@
               },
               "type": "String"
             },
-            "dataLakeStoreLogAnalyticsEffect": {
+            "DataLakeStoreLogAnalyticsEffect": {
               "allowedValues": [
                 "DeployIfNotExists",
                 "Disabled"
@@ -259,7 +259,7 @@
               },
               "type": "String"
             },
-            "databricksLogAnalyticsEffect": {
+            "DatabricksLogAnalyticsEffect": {
               "allowedValues": [
                 "DeployIfNotExists",
                 "Disabled"
@@ -271,7 +271,7 @@
               },
               "type": "String"
             },
-            "eventGridSubLogAnalyticsEffect": {
+            "EventGridSubLogAnalyticsEffect": {
               "allowedValues": [
                 "DeployIfNotExists",
                 "Disabled"
@@ -283,7 +283,7 @@
               },
               "type": "String"
             },
-            "eventGridTopicLogAnalyticsEffect": {
+            "EventGridTopicLogAnalyticsEffect": {
               "allowedValues": [
                 "DeployIfNotExists",
                 "Disabled"
@@ -295,7 +295,7 @@
               },
               "type": "String"
             },
-            "eventHubLogAnalyticsEffect": {
+            "EventHubLogAnalyticsEffect": {
               "allowedValues": [
                 "DeployIfNotExists",
                 "Disabled"
@@ -307,7 +307,7 @@
               },
               "type": "String"
             },
-            "eventSystemTopicLogAnalyticsEffect": {
+            "EventSystemTopicLogAnalyticsEffect": {
               "allowedValues": [
                 "DeployIfNotExists",
                 "Disabled"
@@ -319,7 +319,7 @@
               },
               "type": "String"
             },
-            "expressRouteLogAnalyticsEffect": {
+            "ExpressRouteLogAnalyticsEffect": {
               "allowedValues": [
                 "DeployIfNotExists",
                 "Disabled"
@@ -331,7 +331,7 @@
               },
               "type": "String"
             },
-            "firewallLogAnalyticsEffect": {
+            "FirewallLogAnalyticsEffect": {
               "allowedValues": [
                 "DeployIfNotExists",
                 "Disabled"
@@ -343,7 +343,7 @@
               },
               "type": "String"
             },
-            "frontDoorLogAnalyticsEffect": {
+            "FrontDoorLogAnalyticsEffect": {
               "allowedValues": [
                 "DeployIfNotExists",
                 "Disabled"
@@ -355,7 +355,7 @@
               },
               "type": "String"
             },
-            "functionAppLogAnalyticsEffect": {
+            "FunctionAppLogAnalyticsEffect": {
               "allowedValues": [
                 "DeployIfNotExists",
                 "Disabled"
@@ -367,7 +367,7 @@
               },
               "type": "String"
             },
-            "hdInsightLogAnalyticsEffect": {
+            "HDInsightLogAnalyticsEffect": {
               "allowedValues": [
                 "DeployIfNotExists",
                 "Disabled"
@@ -379,7 +379,7 @@
               },
               "type": "String"
             },
-            "iotHubLogAnalyticsEffect": {
+            "IotHubLogAnalyticsEffect": {
               "allowedValues": [
                 "DeployIfNotExists",
                 "Disabled"
@@ -391,7 +391,7 @@
               },
               "type": "String"
             },
-            "keyVaultLogAnalyticsEffect": {
+            "KeyVaultLogAnalyticsEffect": {
               "allowedValues": [
                 "DeployIfNotExists",
                 "Disabled"
@@ -403,7 +403,7 @@
               },
               "type": "String"
             },
-            "loadBalancerLogAnalyticsEffect": {
+            "LoadBalancerLogAnalyticsEffect": {
               "allowedValues": [
                 "DeployIfNotExists",
                 "Disabled"
@@ -415,15 +415,7 @@
               },
               "type": "String"
             },
-            "logAnalytics": {
-              "metadata": {
-                "description": "Select Log Analytics workspace from dropdown list. If this workspace is outside of the scope of the assignment you must manually grant 'Log Analytics Contributor' permissions (or similar) to the policy assignment's principal ID.",
-                "displayName": "Log Analytics workspace",
-                "strongType": "omsWorkspace"
-              },
-              "type": "String"
-            },
-            "logAnalyticsLogAnalyticsEffect": {
+            "LogAnalyticsLogAnalyticsEffect": {
               "allowedValues": [
                 "DeployIfNotExists",
                 "Disabled"
@@ -435,7 +427,7 @@
               },
               "type": "String"
             },
-            "logicAppsISELogAnalyticsEffect": {
+            "LogicAppsISELogAnalyticsEffect": {
               "allowedValues": [
                 "DeployIfNotExists",
                 "Disabled"
@@ -447,7 +439,7 @@
               },
               "type": "String"
             },
-            "logicAppsWFLogAnalyticsEffect": {
+            "LogicAppsWFLogAnalyticsEffect": {
               "allowedValues": [
                 "DeployIfNotExists",
                 "Disabled"
@@ -459,7 +451,7 @@
               },
               "type": "String"
             },
-            "mariaDBLogAnalyticsEffect": {
+            "MariaDBLogAnalyticsEffect": {
               "allowedValues": [
                 "DeployIfNotExists",
                 "Disabled"
@@ -471,7 +463,7 @@
               },
               "type": "String"
             },
-            "mediaServiceLogAnalyticsEffect": {
+            "MediaServiceLogAnalyticsEffect": {
               "allowedValues": [
                 "DeployIfNotExists",
                 "Disabled"
@@ -483,7 +475,7 @@
               },
               "type": "String"
             },
-            "mlWorkspaceLogAnalyticsEffect": {
+            "MlWorkspaceLogAnalyticsEffect": {
               "allowedValues": [
                 "DeployIfNotExists",
                 "Disabled"
@@ -495,7 +487,7 @@
               },
               "type": "String"
             },
-            "mySQLLogAnalyticsEffect": {
+            "MySQLLogAnalyticsEffect": {
               "allowedValues": [
                 "DeployIfNotExists",
                 "Disabled"
@@ -507,7 +499,7 @@
               },
               "type": "String"
             },
-            "networkNICLogAnalyticsEffect": {
+            "NetworkNICLogAnalyticsEffect": {
               "allowedValues": [
                 "DeployIfNotExists",
                 "Disabled"
@@ -519,7 +511,7 @@
               },
               "type": "String"
             },
-            "networkPublicIPNicLogAnalyticsEffect": {
+            "NetworkPublicIPNicLogAnalyticsEffect": {
               "allowedValues": [
                 "DeployIfNotExists",
                 "Disabled"
@@ -531,7 +523,7 @@
               },
               "type": "String"
             },
-            "networkSecurityGroupsLogAnalyticsEffect": {
+            "NetworkSecurityGroupsLogAnalyticsEffect": {
               "allowedValues": [
                 "DeployIfNotExists",
                 "Disabled"
@@ -543,7 +535,7 @@
               },
               "type": "String"
             },
-            "postgreSQLLogAnalyticsEffect": {
+            "PostgreSQLLogAnalyticsEffect": {
               "allowedValues": [
                 "DeployIfNotExists",
                 "Disabled"
@@ -555,7 +547,7 @@
               },
               "type": "String"
             },
-            "powerBIEmbeddedLogAnalyticsEffect": {
+            "PowerBIEmbeddedLogAnalyticsEffect": {
               "allowedValues": [
                 "DeployIfNotExists",
                 "Disabled"
@@ -567,15 +559,7 @@
               },
               "type": "String"
             },
-            "profileName": {
-              "defaultValue": "setbypolicy",
-              "metadata": {
-                "description": "The diagnostic settings profile name",
-                "displayName": "Profile name"
-              },
-              "type": "String"
-            },
-            "redisCacheLogAnalyticsEffect": {
+            "RedisCacheLogAnalyticsEffect": {
               "allowedValues": [
                 "DeployIfNotExists",
                 "Disabled"
@@ -587,7 +571,7 @@
               },
               "type": "String"
             },
-            "relayLogAnalyticsEffect": {
+            "RelayLogAnalyticsEffect": {
               "allowedValues": [
                 "DeployIfNotExists",
                 "Disabled"
@@ -599,55 +583,7 @@
               },
               "type": "String"
             },
-            "searchServicesLogAnalyticsEffect": {
-              "allowedValues": [
-                "DeployIfNotExists",
-                "Disabled"
-              ],
-              "defaultValue": "DeployIfNotExists",
-              "metadata": {
-                "description": "Deploys the diagnostic settings for Search Services to stream to a Log Analytics workspace when any Search Services which is missing this diagnostic settings is created or updated. The Policy will set the diagnostic with all metrics and category enabled",
-                "displayName": "Deploy Diagnostic Settings for Search Services to Log Analytics workspace"
-              },
-              "type": "String"
-            },
-            "serviceBusLogAnalyticsEffect": {
-              "allowedValues": [
-                "DeployIfNotExists",
-                "Disabled"
-              ],
-              "defaultValue": "DeployIfNotExists",
-              "metadata": {
-                "description": "Deploys the diagnostic settings for ServiceBus to stream to a Log Analytics workspace when any ServiceBus which is missing this diagnostic settings is created or updated. The Policy will set the diagnostic with all metrics and category enabled",
-                "displayName": "Deploy Diagnostic Settings for Service Bus namespaces  to Log Analytics workspace"
-              },
-              "type": "String"
-            },
-            "signalRLogAnalyticsEffect": {
-              "allowedValues": [
-                "DeployIfNotExists",
-                "Disabled"
-              ],
-              "defaultValue": "DeployIfNotExists",
-              "metadata": {
-                "description": "Deploys the diagnostic settings for SignalR to stream to a Log Analytics workspace when any SignalR which is missing this diagnostic settings is created or updated. The Policy will set the diagnostic with all metrics and category enabled",
-                "displayName": "Deploy Diagnostic Settings for SignalR to Log Analytics workspace"
-              },
-              "type": "String"
-            },
-            "sqlElasticPoolsLogAnalyticsEffect": {
-              "allowedValues": [
-                "DeployIfNotExists",
-                "Disabled"
-              ],
-              "defaultValue": "DeployIfNotExists",
-              "metadata": {
-                "description": "Deploys the diagnostic settings for SQL Elastic Pools to stream to a Log Analytics workspace when any SQL Elastic Pools which is missing this diagnostic settings is created or updated. The Policy will set the diagnostic with all metrics and category enabled",
-                "displayName": "Deploy Diagnostic Settings for SQL Elastic Pools to Log Analytics workspace"
-              },
-              "type": "String"
-            },
-            "sqldBsLogAnalyticsEffect": {
+            "SQLDBsLogAnalyticsEffect": {
               "allowedValues": [
                 "DeployIfNotExists",
                 "Disabled"
@@ -659,7 +595,19 @@
               },
               "type": "String"
             },
-            "sqlmLogAnalyticsEffect": {
+            "SQLElasticPoolsLogAnalyticsEffect": {
+              "allowedValues": [
+                "DeployIfNotExists",
+                "Disabled"
+              ],
+              "defaultValue": "DeployIfNotExists",
+              "metadata": {
+                "description": "Deploys the diagnostic settings for SQL Elastic Pools to stream to a Log Analytics workspace when any SQL Elastic Pools which is missing this diagnostic settings is created or updated. The Policy will set the diagnostic with all metrics and category enabled",
+                "displayName": "Deploy Diagnostic Settings for SQL Elastic Pools to Log Analytics workspace"
+              },
+              "type": "String"
+            },
+            "SQLMLogAnalyticsEffect": {
               "allowedValues": [
                 "DeployIfNotExists",
                 "Disabled"
@@ -671,7 +619,43 @@
               },
               "type": "String"
             },
-            "storageAccountsLogAnalyticsEffect": {
+            "SearchServicesLogAnalyticsEffect": {
+              "allowedValues": [
+                "DeployIfNotExists",
+                "Disabled"
+              ],
+              "defaultValue": "DeployIfNotExists",
+              "metadata": {
+                "description": "Deploys the diagnostic settings for Search Services to stream to a Log Analytics workspace when any Search Services which is missing this diagnostic settings is created or updated. The Policy will set the diagnostic with all metrics and category enabled",
+                "displayName": "Deploy Diagnostic Settings for Search Services to Log Analytics workspace"
+              },
+              "type": "String"
+            },
+            "ServiceBusLogAnalyticsEffect": {
+              "allowedValues": [
+                "DeployIfNotExists",
+                "Disabled"
+              ],
+              "defaultValue": "DeployIfNotExists",
+              "metadata": {
+                "description": "Deploys the diagnostic settings for ServiceBus to stream to a Log Analytics workspace when any ServiceBus which is missing this diagnostic settings is created or updated. The Policy will set the diagnostic with all metrics and category enabled",
+                "displayName": "Deploy Diagnostic Settings for Service Bus namespaces  to Log Analytics workspace"
+              },
+              "type": "String"
+            },
+            "SignalRLogAnalyticsEffect": {
+              "allowedValues": [
+                "DeployIfNotExists",
+                "Disabled"
+              ],
+              "defaultValue": "DeployIfNotExists",
+              "metadata": {
+                "description": "Deploys the diagnostic settings for SignalR to stream to a Log Analytics workspace when any SignalR which is missing this diagnostic settings is created or updated. The Policy will set the diagnostic with all metrics and category enabled",
+                "displayName": "Deploy Diagnostic Settings for SignalR to Log Analytics workspace"
+              },
+              "type": "String"
+            },
+            "StorageAccountsLogAnalyticsEffect": {
               "allowedValues": [
                 "DeployIfNotExists",
                 "Disabled"
@@ -683,7 +667,7 @@
               },
               "type": "String"
             },
-            "streamAnalyticsLogAnalyticsEffect": {
+            "StreamAnalyticsLogAnalyticsEffect": {
               "allowedValues": [
                 "DeployIfNotExists",
                 "Disabled"
@@ -695,7 +679,7 @@
               },
               "type": "String"
             },
-            "timeSeriesInsightsLogAnalyticsEffect": {
+            "TimeSeriesInsightsLogAnalyticsEffect": {
               "allowedValues": [
                 "DeployIfNotExists",
                 "Disabled"
@@ -707,7 +691,7 @@
               },
               "type": "String"
             },
-            "trafficManagerLogAnalyticsEffect": {
+            "TrafficManagerLogAnalyticsEffect": {
               "allowedValues": [
                 "DeployIfNotExists",
                 "Disabled"
@@ -719,55 +703,7 @@
               },
               "type": "String"
             },
-            "vNetGWLogAnalyticsEffect": {
-              "allowedValues": [
-                "DeployIfNotExists",
-                "Disabled"
-              ],
-              "defaultValue": "DeployIfNotExists",
-              "metadata": {
-                "description": "Deploys the diagnostic settings for VPN Gateway to stream to a Log Analytics workspace when any VPN Gateway which is missing this diagnostic settings is created or updated. The Policy will set the diagnostic with all metrics and category enabled.",
-                "displayName": "Deploy Diagnostic Settings for VPN Gateway to Log Analytics workspace"
-              },
-              "type": "String"
-            },
-            "vWanS2SVPNGWLogAnalyticsEffect": {
-              "allowedValues": [
-                "DeployIfNotExists",
-                "Disabled"
-              ],
-              "defaultValue": "DeployIfNotExists",
-              "metadata": {
-                "description": "Deploys the diagnostic settings for VWAN S2S VPN gateway to stream to a Log Analytics workspace when any storage account which is missing this diagnostic settings is created or updated. The Policy will set the diagnostic with all metrics and category enabled",
-                "displayName": "Deploy Diagnostic Settings for VWAN S2S VPN gateway to Log Analytics workspace"
-              },
-              "type": "String"
-            },
-            "virtualMachinesLogAnalyticsEffect": {
-              "allowedValues": [
-                "DeployIfNotExists",
-                "Disabled"
-              ],
-              "defaultValue": "DeployIfNotExists",
-              "metadata": {
-                "description": "Deploys the diagnostic settings for Virtual Machines to stream to a Log Analytics workspace when any Virtual Machines which is missing this diagnostic settings is created or updated. The Policy will set the diagnostic with all metrics and category enabled",
-                "displayName": "Deploy Diagnostic Settings for Virtual Machines to Log Analytics workspace"
-              },
-              "type": "String"
-            },
-            "virtualNetworkLogAnalyticsEffect": {
-              "allowedValues": [
-                "DeployIfNotExists",
-                "Disabled"
-              ],
-              "defaultValue": "DeployIfNotExists",
-              "metadata": {
-                "description": "Deploys the diagnostic settings for Virtual Network to stream to a Log Analytics workspace when any Virtual Network which is missing this diagnostic settings is created or updated. The Policy will set the diagnostic with all metrics and category enabled",
-                "displayName": "Deploy Diagnostic Settings for Virtual Network to Log Analytics workspace"
-              },
-              "type": "String"
-            },
-            "vmssLogAnalyticsEffect": {
+            "VMSSLogAnalyticsEffect": {
               "allowedValues": [
                 "DeployIfNotExists",
                 "Disabled"
@@ -779,7 +715,55 @@
               },
               "type": "String"
             },
-            "wvdAppGroupsLogAnalyticsEffect": {
+            "VNetGWLogAnalyticsEffect": {
+              "allowedValues": [
+                "DeployIfNotExists",
+                "Disabled"
+              ],
+              "defaultValue": "DeployIfNotExists",
+              "metadata": {
+                "description": "Deploys the diagnostic settings for VPN Gateway to stream to a Log Analytics workspace when any VPN Gateway which is missing this diagnostic settings is created or updated. The Policy will set the diagnostic with all metrics and category enabled.",
+                "displayName": "Deploy Diagnostic Settings for VPN Gateway to Log Analytics workspace"
+              },
+              "type": "String"
+            },
+            "VWanS2SVPNGWLogAnalyticsEffect": {
+              "allowedValues": [
+                "DeployIfNotExists",
+                "Disabled"
+              ],
+              "defaultValue": "DeployIfNotExists",
+              "metadata": {
+                "description": "Deploys the diagnostic settings for VWAN S2S VPN gateway to stream to a Log Analytics workspace when any storage account which is missing this diagnostic settings is created or updated. The Policy will set the diagnostic with all metrics and category enabled",
+                "displayName": "Deploy Diagnostic Settings for VWAN S2S VPN gateway to Log Analytics workspace"
+              },
+              "type": "String"
+            },
+            "VirtualMachinesLogAnalyticsEffect": {
+              "allowedValues": [
+                "DeployIfNotExists",
+                "Disabled"
+              ],
+              "defaultValue": "DeployIfNotExists",
+              "metadata": {
+                "description": "Deploys the diagnostic settings for Virtual Machines to stream to a Log Analytics workspace when any Virtual Machines which is missing this diagnostic settings is created or updated. The Policy will set the diagnostic with all metrics and category enabled",
+                "displayName": "Deploy Diagnostic Settings for Virtual Machines to Log Analytics workspace"
+              },
+              "type": "String"
+            },
+            "VirtualNetworkLogAnalyticsEffect": {
+              "allowedValues": [
+                "DeployIfNotExists",
+                "Disabled"
+              ],
+              "defaultValue": "DeployIfNotExists",
+              "metadata": {
+                "description": "Deploys the diagnostic settings for Virtual Network to stream to a Log Analytics workspace when any Virtual Network which is missing this diagnostic settings is created or updated. The Policy will set the diagnostic with all metrics and category enabled",
+                "displayName": "Deploy Diagnostic Settings for Virtual Network to Log Analytics workspace"
+              },
+              "type": "String"
+            },
+            "WVDAppGroupsLogAnalyticsEffect": {
               "allowedValues": [
                 "DeployIfNotExists",
                 "Disabled"
@@ -791,7 +775,7 @@
               },
               "type": "String"
             },
-            "wvdHostPoolsLogAnalyticsEffect": {
+            "WVDHostPoolsLogAnalyticsEffect": {
               "allowedValues": [
                 "DeployIfNotExists",
                 "Disabled"
@@ -803,7 +787,7 @@
               },
               "type": "String"
             },
-            "wvdWorkspaceLogAnalyticsEffect": {
+            "WVDWorkspaceLogAnalyticsEffect": {
               "allowedValues": [
                 "DeployIfNotExists",
                 "Disabled"
@@ -812,6 +796,22 @@
               "metadata": {
                 "description": "Deploys the diagnostic settings for AVD Workspace to stream to a Log Analytics workspace when any Workspace which is missing this diagnostic settings is created or updated. The Policy will set the diagnostic with all metrics and category enabled",
                 "displayName": "Deploy Diagnostic Settings for AVD Workspace to Log Analytics workspace"
+              },
+              "type": "String"
+            },
+            "logAnalytics": {
+              "metadata": {
+                "description": "Select Log Analytics workspace from dropdown list. If this workspace is outside of the scope of the assignment you must manually grant 'Log Analytics Contributor' permissions (or similar) to the policy assignment's principal ID.",
+                "displayName": "Log Analytics workspace",
+                "strongType": "omsWorkspace"
+              },
+              "type": "String"
+            },
+            "profileName": {
+              "defaultValue": "setbypolicy",
+              "metadata": {
+                "description": "The diagnostic settings profile name",
+                "displayName": "Profile name"
               },
               "type": "String"
             }

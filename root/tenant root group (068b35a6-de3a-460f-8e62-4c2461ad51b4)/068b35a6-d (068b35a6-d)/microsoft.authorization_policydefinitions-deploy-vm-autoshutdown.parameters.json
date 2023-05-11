@@ -22,7 +22,7 @@
           },
           "mode": "Indexed",
           "parameters": {
-            "enableNotification": {
+            "EnableNotification": {
               "allowedValues": [
                 "Disabled",
                 "Enabled"
@@ -34,14 +34,14 @@
               },
               "type": "string"
             },
-            "notificationEmailRecipient": {
+            "NotificationEmailRecipient": {
               "metadata": {
                 "description": "Email address to be used for notification",
                 "displayName": "Email Address"
               },
               "type": "string"
             },
-            "notificationWebhookUrl": {
+            "NotificationWebhookUrl": {
               "metadata": {
                 "description": "A notification will be posted to the specified webhook endpoint when the auto-shutdown is about to happen.",
                 "displayName": "Webhook URL"
