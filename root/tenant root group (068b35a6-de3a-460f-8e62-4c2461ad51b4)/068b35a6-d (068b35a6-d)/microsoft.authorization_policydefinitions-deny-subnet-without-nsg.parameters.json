@@ -39,7 +39,7 @@
               "defaultValue": [
                 "GatewaySubnet",
                 "AzureFirewallSubnet",
-                "AzureFirewallManagementSubnet"
+                "AzureFirewallManagementSubnet",
                 "AzureBastionSubnet"
               ],
               "metadata": {
