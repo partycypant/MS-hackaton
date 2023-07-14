@@ -19,7 +19,7 @@
             "version": "2.0.0"
           },
           "parameters": {
-            "acrCmkEffect": {
+            "ACRCmkEffect": {
               "allowedValues": [
                 "Audit",
                 "Deny",
@@ -32,7 +32,7 @@
               },
               "type": "String"
             },
-            "aksCmkEffect": {
+            "AksCmkEffect": {
               "allowedValues": [
                 "Audit",
                 "Deny",
@@ -45,7 +45,7 @@
               },
               "type": "String"
             },
-            "azureBatchCMKEffect": {
+            "AzureBatchCMKEffect": {
               "allowedValues": [
                 "Audit",
                 "Deny",
@@ -58,7 +58,7 @@
               },
               "type": "String"
             },
-            "cognitiveServicesCMKEffect": {
+            "CognitiveServicesCMKEffect": {
               "allowedValues": [
                 "Audit",
                 "Deny",
@@ -71,7 +71,7 @@
               },
               "type": "String"
             },
-            "cosmosCMKEffect": {
+            "CosmosCMKEffect": {
               "allowedValues": [
                 "audit",
                 "deny",
@@ -84,7 +84,7 @@
               },
               "type": "String"
             },
-            "dataBoxCMKEffect": {
+            "DataBoxCMKEffect": {
               "allowedValues": [
                 "Audit",
                 "Deny",
@@ -97,7 +97,7 @@
               },
               "type": "String"
             },
-            "encryptedVMDisksEffect": {
+            "EncryptedVMDisksEffect": {
               "allowedValues": [
                 "AuditIfNotExists",
                 "Disabled"
@@ -109,7 +109,7 @@
               },
               "type": "String"
             },
-            "healthcareAPIsCMKEffect": {
+            "HealthcareAPIsCMKEffect": {
               "allowedValues": [
                 "audit",
                 "disabled"
@@ -121,7 +121,7 @@
               },
               "type": "String"
             },
-            "mySQLCMKEffect": {
+            "MySQLCMKEffect": {
               "allowedValues": [
                 "AuditIfNotExists",
                 "Disabled"
@@ -133,7 +133,7 @@
               },
               "type": "String"
             },
-            "postgreSQLCMKEffect": {
+            "PostgreSQLCMKEffect": {
               "allowedValues": [
                 "AuditIfNotExists",
                 "Disabled"
@@ -145,7 +145,7 @@
               },
               "type": "String"
             },
-            "sqlServerTDECMKEffect": {
+            "SqlServerTDECMKEffect": {
               "allowedValues": [
                 "Audit",
                 "Deny",
@@ -158,7 +158,7 @@
               },
               "type": "String"
             },
-            "storageCMKEffect": {
+            "StorageCMKEffect": {
               "allowedValues": [
                 "Audit",
                 "Disabled"
@@ -170,7 +170,7 @@
               },
               "type": "String"
             },
-            "streamAnalyticsCMKEffect": {
+            "StreamAnalyticsCMKEffect": {
               "allowedValues": [
                 "audit",
                 "deny",
@@ -183,7 +183,7 @@
               },
               "type": "String"
             },
-            "synapseWorkspaceCMKEffect": {
+            "SynapseWorkspaceCMKEffect": {
               "allowedValues": [
                 "Audit",
                 "Deny",
@@ -196,7 +196,7 @@
               },
               "type": "String"
             },
-            "workspaceCMKEffect": {
+            "WorkspaceCMKEffect": {
               "allowedValues": [
                 "Audit",
                 "Deny",

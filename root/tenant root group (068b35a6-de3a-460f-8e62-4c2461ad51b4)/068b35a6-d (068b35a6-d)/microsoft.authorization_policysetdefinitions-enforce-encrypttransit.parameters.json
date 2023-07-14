@@ -21,7 +21,7 @@
             "version": "2.0.0"
           },
           "parameters": {
-            "aksIngressHttpsOnlyEffect": {
+            "AKSIngressHttpsOnlyEffect": {
               "allowedValues": [
                 "audit",
                 "deny",
@@ -34,7 +34,7 @@
               },
               "type": "String"
             },
-            "apiAppServiceHttpsEffect": {
+            "APIAppServiceHttpsEffect": {
               "allowedValues": [
                 "Audit",
                 "Disabled",
@@ -47,7 +47,7 @@
               },
               "type": "String"
             },
-            "appServiceHttpEffect": {
+            "AppServiceHttpEffect": {
               "allowedValues": [
                 "Append",
                 "Disabled"
@@ -59,7 +59,7 @@
               },
               "type": "String"
             },
-            "appServiceTlsVersionEffect": {
+            "AppServiceTlsVersionEffect": {
               "allowedValues": [
                 "Append",
                 "Disabled"
@@ -71,7 +71,7 @@
               },
               "type": "String"
             },
-            "appServiceminTlsVersion": {
+            "AppServiceminTlsVersion": {
               "allowedValues": [
                 "1.2",
                 "1.0",
@@ -84,7 +84,7 @@
               },
               "type": "String"
             },
-            "functionLatestTlsEffect": {
+            "FunctionLatestTlsEffect": {
               "allowedValues": [
                 "AuditIfNotExists",
                 "Disabled"
@@ -96,7 +96,7 @@
               },
               "type": "String"
             },
-            "functionServiceHttpsEffect": {
+            "FunctionServiceHttpsEffect": {
               "allowedValues": [
                 "Audit",
                 "Disabled",
@@ -109,7 +109,7 @@
               },
               "type": "String"
             },
-            "mySQLEnableSSLDeployEffect": {
+            "MySQLEnableSSLDeployEffect": {
               "allowedValues": [
                 "DeployIfNotExists",
                 "Disabled"
@@ -121,7 +121,7 @@
               },
               "type": "String"
             },
-            "mySQLEnableSSLEffect": {
+            "MySQLEnableSSLEffect": {
               "allowedValues": [
                 "Audit",
                 "Disabled",
@@ -134,7 +134,7 @@
               },
               "type": "String"
             },
-            "mySQLminimalTlsVersion": {
+            "MySQLminimalTlsVersion": {
               "allowedValues": [
                 "TLS1_2",
                 "TLS1_0",
@@ -148,7 +148,7 @@
               },
               "type": "String"
             },
-            "postgreSQLEnableSSLDeployEffect": {
+            "PostgreSQLEnableSSLDeployEffect": {
               "allowedValues": [
                 "DeployIfNotExists",
                 "Disabled"
@@ -160,7 +160,7 @@
               },
               "type": "String"
             },
-            "postgreSQLEnableSSLEffect": {
+            "PostgreSQLEnableSSLEffect": {
               "allowedValues": [
                 "Audit",
                 "Disabled",
@@ -173,7 +173,7 @@
               },
               "type": "String"
             },
-            "postgreSQLminimalTlsVersion": {
+            "PostgreSQLminimalTlsVersion": {
               "allowedValues": [
                 "TLS1_2",
                 "TLS1_0",
@@ -187,7 +187,7 @@
               },
               "type": "String"
             },
-            "redisMinTlsVersion": {
+            "RedisMinTlsVersion": {
               "allowedValues": [
                 "1.2",
                 "1.0",
@@ -200,7 +200,7 @@
               },
               "type": "String"
             },
-            "redisTLSDeployEffect": {
+            "RedisTLSDeployEffect": {
               "allowedValues": [
                 "Append",
                 "Disabled"
@@ -212,7 +212,7 @@
               },
               "type": "String"
             },
-            "redisTLSEffect": {
+            "RedisTLSEffect": {
               "allowedValues": [
                 "Audit",
                 "Deny",
@@ -225,7 +225,7 @@
               },
               "type": "String"
             },
-            "sqlManagedInstanceMinTlsVersion": {
+            "SQLManagedInstanceMinTlsVersion": {
               "allowedValues": [
                 "1.2",
                 "1.0",
@@ -238,7 +238,7 @@
               },
               "type": "String"
             },
-            "sqlManagedInstanceTLSDeployEffect": {
+            "SQLManagedInstanceTLSDeployEffect": {
               "allowedValues": [
                 "DeployIfNotExists",
                 "Disabled"
@@ -250,7 +250,7 @@
               },
               "type": "String"
             },
-            "sqlManagedInstanceTLSEffect": {
+            "SQLManagedInstanceTLSEffect": {
               "allowedValues": [
                 "Audit",
                 "Disabled",
@@ -263,7 +263,7 @@
               },
               "type": "String"
             },
-            "sqlServerTLSDeployEffect": {
+            "SQLServerTLSDeployEffect": {
               "allowedValues": [
                 "DeployIfNotExists",
                 "Disabled"
@@ -275,7 +275,7 @@
               },
               "type": "String"
             },
-            "sqlServerTLSEffect": {
+            "SQLServerTLSEffect": {
               "allowedValues": [
                 "Audit",
                 "Disabled",
@@ -288,7 +288,7 @@
               },
               "type": "String"
             },
-            "sqlServerminTlsVersion": {
+            "SQLServerminTlsVersion": {
               "allowedValues": [
                 "1.2",
                 "1.0",
@@ -301,7 +301,7 @@
               },
               "type": "String"
             },
-            "storageDeployHttpsEnabledEffect": {
+            "StorageDeployHttpsEnabledEffect": {
               "allowedValues": [
                 "DeployIfNotExists",
                 "Disabled"
@@ -313,7 +313,7 @@
               },
               "type": "String"
             },
-            "storageHttpsEnabledEffect": {
+            "StorageHttpsEnabledEffect": {
               "allowedValues": [
                 "Audit",
                 "Deny",
@@ -326,7 +326,7 @@
               },
               "type": "String"
             },
-            "storageminimumTlsVersion": {
+            "StorageminimumTlsVersion": {
               "allowedValues": [
                 "TLS1_2",
                 "TLS1_1",
@@ -339,7 +339,7 @@
               },
               "type": "String"
             },
-            "webAppServiceHttpsEffect": {
+            "WebAppServiceHttpsEffect": {
               "allowedValues": [
                 "Audit",
                 "Disabled",
@@ -352,7 +352,7 @@
               },
               "type": "String"
             },
-            "webAppServiceLatestTlsEffect": {
+            "WebAppServiceLatestTlsEffect": {
               "allowedValues": [
                 "AuditIfNotExists",
                 "Disabled"

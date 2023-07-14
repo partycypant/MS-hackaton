@@ -1,0 +1,35 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "metadata": {
+    "_generator": {
+      "name": "AzOps"
+    }
+  },
+  "parameters": {},
+  "variables": {},
+  "resources": [
+    {
+      "type": "Microsoft.Authorization/policyAssignments",
+      "name": "8c4fef7d05954a5998bc1354",
+      "kind": "policyassignments",
+      "apiVersion": "2022-06-01",
+      "location": "global",
+      "properties": {
+        "displayName": "Azure Backup should be enabled for Virtual Machines",
+        "enforcementMode": "Default",
+        "metadata": {
+          "parameterScopes": {}
+        },
+        "nonComplianceMessages": [],
+        "notScopes": [],
+        "overrides": [],
+        "parameters": {},
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/013e242c-8828-4970-87b3-ab247555486d",
+        "resourceSelectors": [],
+        "scope": "/subscriptions/fe85d0df-07e6-4980-b14e-ed5912fbac9c"
+      }
+    }
+  ],
+  "outputs": {}
+}

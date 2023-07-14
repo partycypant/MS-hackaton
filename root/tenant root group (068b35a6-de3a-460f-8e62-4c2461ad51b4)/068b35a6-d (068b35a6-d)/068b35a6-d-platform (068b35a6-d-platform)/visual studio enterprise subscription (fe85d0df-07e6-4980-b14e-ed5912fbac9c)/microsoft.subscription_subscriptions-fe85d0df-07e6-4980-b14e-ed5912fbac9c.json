@@ -12,7 +12,7 @@
     {
       "type": "Microsoft.Management/managementGroups/subscriptions",
       "name": "068b35a6-d-platform/fe85d0df-07e6-4980-b14e-ed5912fbac9c",
-      "apiVersion": "2021-04-01",
+      "apiVersion": "2023-04-01",
       "scope": "/"
     }
   ],

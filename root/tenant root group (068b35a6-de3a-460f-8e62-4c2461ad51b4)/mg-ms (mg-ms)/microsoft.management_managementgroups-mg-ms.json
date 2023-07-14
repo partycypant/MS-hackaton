@@ -12,7 +12,7 @@
     {
       "type": "Microsoft.Management/managementGroups",
       "name": "mg-ms",
-      "apiVersion": "2021-04-01",
+      "apiVersion": "2023-04-01",
       "scope": "/",
       "properties": {
         "displayName": "mg-ms",
