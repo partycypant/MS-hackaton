@@ -1,0 +1,35 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "metadata": {
+    "_generator": {
+      "name": "AzOps"
+    }
+  },
+  "parameters": {},
+  "variables": {},
+  "resources": [
+    {
+      "type": "Microsoft.Authorization/policyAssignments",
+      "name": "83e63bfbc0ea4801a6238a6a",
+      "kind": "policyassignments",
+      "apiVersion": "2022-06-01",
+      "location": "global",
+      "properties": {
+        "displayName": "Custom auto-backup for VMs",
+        "enforcementMode": "Default",
+        "metadata": {
+          "parameterScopes": {}
+        },
+        "nonComplianceMessages": [],
+        "notScopes": [],
+        "overrides": [],
+        "parameters": {},
+        "policyDefinitionId": "/subscriptions/fe85d0df-07e6-4980-b14e-ed5912fbac9c/providers/Microsoft.Authorization/policyDefinitions/95c46e9c-2949-4fd8-b759-1abaf1b81746",
+        "resourceSelectors": [],
+        "scope": "/subscriptions/fe85d0df-07e6-4980-b14e-ed5912fbac9c"
+      }
+    }
+  ],
+  "outputs": {}
+}

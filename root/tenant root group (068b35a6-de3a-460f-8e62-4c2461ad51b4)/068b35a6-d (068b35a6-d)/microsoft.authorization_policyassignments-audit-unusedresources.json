@@ -26,13 +26,13 @@
           }
         ],
         "parameters": {
-          "effectDisks": {
+          "EffectDisks": {
             "value": "Audit"
           },
-          "effectPublicIpAddresses": {
+          "EffectPublicIpAddresses": {
             "value": "Audit"
           },
-          "effectServerFarms": {
+          "EffectServerFarms": {
             "value": "Audit"
           }
         },

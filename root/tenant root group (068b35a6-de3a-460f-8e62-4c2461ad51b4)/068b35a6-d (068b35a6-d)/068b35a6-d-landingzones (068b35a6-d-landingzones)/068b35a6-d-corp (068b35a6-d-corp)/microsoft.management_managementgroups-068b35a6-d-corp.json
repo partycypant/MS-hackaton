@@ -12,7 +12,7 @@
     {
       "type": "Microsoft.Management/managementGroups",
       "name": "068b35a6-d-corp",
-      "apiVersion": "2021-04-01",
+      "apiVersion": "2023-04-01",
       "scope": "/",
       "properties": {
         "displayName": "068b35a6-d-corp",

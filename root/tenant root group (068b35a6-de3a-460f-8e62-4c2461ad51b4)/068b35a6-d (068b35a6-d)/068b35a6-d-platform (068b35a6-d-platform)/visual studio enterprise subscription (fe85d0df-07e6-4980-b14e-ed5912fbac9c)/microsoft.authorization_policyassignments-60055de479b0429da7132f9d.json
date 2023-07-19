@@ -1,0 +1,40 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "metadata": {
+    "_generator": {
+      "name": "AzOps"
+    }
+  },
+  "parameters": {},
+  "variables": {},
+  "resources": [
+    {
+      "type": "Microsoft.Authorization/policyAssignments",
+      "name": "60055de479b0429da7132f9d",
+      "kind": "policyassignments",
+      "apiVersion": "2022-06-01",
+      "location": "eastus",
+      "identity": {
+        "principalId": "53f8e6e3-21c6-4eaf-b1c5-ca1996fb84eb",
+        "tenantId": "068b35a6-de3a-460f-8e62-4c2461ad51b4",
+        "type": "SystemAssigned"
+      },
+      "properties": {
+        "displayName": "auditing and / or configuration of Azure SQL Database PITR",
+        "enforcementMode": "Default",
+        "metadata": {
+          "parameterScopes": {}
+        },
+        "nonComplianceMessages": [],
+        "notScopes": [],
+        "overrides": [],
+        "parameters": {},
+        "policyDefinitionId": "/subscriptions/fe85d0df-07e6-4980-b14e-ed5912fbac9c/providers/Microsoft.Authorization/policyDefinitions/acec68e7-7831-4add-ad31-14229e95c748",
+        "resourceSelectors": [],
+        "scope": "/subscriptions/fe85d0df-07e6-4980-b14e-ed5912fbac9c"
+      }
+    }
+  ],
+  "outputs": {}
+}

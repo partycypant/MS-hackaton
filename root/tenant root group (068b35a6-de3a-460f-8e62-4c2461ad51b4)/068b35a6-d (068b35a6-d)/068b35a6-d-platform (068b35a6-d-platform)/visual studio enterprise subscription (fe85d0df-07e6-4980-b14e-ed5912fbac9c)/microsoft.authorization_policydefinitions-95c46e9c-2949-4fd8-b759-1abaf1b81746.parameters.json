@@ -1,0 +1,64 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "input": {
+      "value": {
+        "kind": "policydefinitions",
+        "location": "global",
+        "name": "95c46e9c-2949-4fd8-b759-1abaf1b81746",
+        "properties": {
+          "displayName": "Custom auto-backup for VMs",
+          "metadata": {
+            "version": "3.0.0"
+          },
+          "mode": "Indexed",
+          "parameters": {
+            "effect": {
+              "allowedValues": [
+                "AuditIfNotExists",
+                "Disabled",
+                "Enable"
+              ],
+              "defaultValue": "AuditIfNotExists",
+              "metadata": {
+                "description": "Enable or disable the execution of the policy",
+                "displayName": "Effect"
+              },
+              "type": "String"
+            }
+          },
+          "policyRule": {
+            "if": {
+              "allOf": [
+                {
+                  "equals": "Microsoft.Compute/virtualMachines",
+                  "field": "type"
+                },
+                {
+                  "field": "id",
+                  "notContains": "/resourceGroups/databricks-rg-"
+                },
+                {
+                  "field": "Microsoft.Compute/imagePublisher",
+                  "notEquals": "azureopenshift"
+                },
+                {
+                  "field": "Microsoft.Compute/imagePublisher",
+                  "notEquals": "AzureDatabricks"
+                }
+              ]
+            },
+            "then": {
+              "details": {
+                "type": "Microsoft.RecoveryServices/backupprotecteditems"
+              },
+              "effect": "[parameters('effect')]"
+            }
+          }
+        },
+        "type": "Microsoft.Authorization/policyDefinitions"
+      }
+    }
+  }
+}

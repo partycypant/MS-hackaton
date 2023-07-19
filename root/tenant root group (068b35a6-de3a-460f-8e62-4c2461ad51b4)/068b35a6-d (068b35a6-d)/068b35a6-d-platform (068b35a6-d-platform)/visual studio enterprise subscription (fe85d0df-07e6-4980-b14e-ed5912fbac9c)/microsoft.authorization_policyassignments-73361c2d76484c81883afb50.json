@@ -1,0 +1,72 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "metadata": {
+    "_generator": {
+      "name": "AzOps"
+    }
+  },
+  "parameters": {},
+  "variables": {},
+  "resources": [
+    {
+      "type": "Microsoft.Authorization/policyAssignments",
+      "name": "73361c2d76484c81883afb50",
+      "kind": "policyassignments",
+      "apiVersion": "2022-06-01",
+      "location": "eastus",
+      "identity": {
+        "principalId": "2ef0a977-4ac4-4ccd-b22d-5983c961847c",
+        "tenantId": "068b35a6-de3a-460f-8e62-4c2461ad51b4",
+        "type": "SystemAssigned"
+      },
+      "properties": {
+        "displayName": "Configure disaster recovery on virtual machines by enabling replication via Azure Site Recovery",
+        "enforcementMode": "Default",
+        "metadata": {
+          "parameterScopes": {
+            "cacheStorageAccountId": "/subscriptions/fe85d0df-07e6-4980-b14e-ed5912fbac9c",
+            "recoveryNetworkId": "/subscriptions/fe85d0df-07e6-4980-b14e-ed5912fbac9c",
+            "sourceRegion": "/subscriptions/fe85d0df-07e6-4980-b14e-ed5912fbac9c",
+            "targetRegion": "/subscriptions/fe85d0df-07e6-4980-b14e-ed5912fbac9c",
+            "targetResourceGroupId": "/subscriptions/fe85d0df-07e6-4980-b14e-ed5912fbac9c",
+            "targetZone": "/subscriptions/fe85d0df-07e6-4980-b14e-ed5912fbac9c",
+            "vaultId": "/subscriptions/fe85d0df-07e6-4980-b14e-ed5912fbac9c",
+            "vaultResourceGroupId": "/subscriptions/fe85d0df-07e6-4980-b14e-ed5912fbac9c"
+          }
+        },
+        "nonComplianceMessages": [],
+        "notScopes": [],
+        "overrides": [],
+        "parameters": {
+          "cacheStorageAccountId": {
+            "value": "zmeu3hasr"
+          },
+          "recoveryNetworkId": {
+            "value": "Site-recovery-target-RG-asr-vnet-asr"
+          },
+          "sourceRegion": {
+            "value": "westeurope"
+          },
+          "targetRegion": {
+            "value": "australiacentral"
+          },
+          "targetResourceGroupId": {
+            "value": "/subscriptions/fe85d0df-07e6-4980-b14e-ed5912fbac9c/resourcegroups/Site-recovery-target-RG-asr"
+          },
+          "targetZone": {},
+          "vaultId": {
+            "value": "/subscriptions/fe85d0df-07e6-4980-b14e-ed5912fbac9c/resourceGroups/Site-recovery-vault-RG-asr/providers/Microsoft.RecoveryServices/vaults/Site-recovery-vault-RG-asrsite-recoveryVault-asr"
+          },
+          "vaultResourceGroupId": {
+            "value": "/subscriptions/fe85d0df-07e6-4980-b14e-ed5912fbac9c/resourcegroups/Site-recovery-vault-RG-asr"
+          }
+        },
+        "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/ac34a73f-9fa5-4067-9247-a3ecae514468",
+        "resourceSelectors": [],
+        "scope": "/subscriptions/fe85d0df-07e6-4980-b14e-ed5912fbac9c"
+      }
+    }
+  ],
+  "outputs": {}
+}

@@ -1,0 +1,105 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "input": {
+      "value": {
+        "kind": "policydefinitions",
+        "location": "global",
+        "name": "acec68e7-7831-4add-ad31-14229e95c748",
+        "properties": {
+          "displayName": "auditing and / or configuration of Azure SQL Database PITR",
+          "metadata": {},
+          "mode": "All",
+          "parameters": {
+            "effect": {
+              "allowedValues": [
+                "DeployIfNotExists",
+                "AuditIfNotExists",
+                "Disabled"
+              ],
+              "defaultValue": "DeployIfNotExists",
+              "metadata": {
+                "description": "Enable or disable the execution of the policy.",
+                "displayName": "Effect"
+              },
+              "type": "String"
+            },
+            "retentionDays": {
+              "defaultValue": "7",
+              "metadata": {
+                "description": "Set the number of Backup Retention Days.",
+                "displayName": "Retention Days"
+              },
+              "type": "String"
+            }
+          },
+          "policyRule": {
+            "if": {
+              "allOf": [
+                {
+                  "equals": "Microsoft.Sql/servers/databases",
+                  "field": "type"
+                },
+                {
+                  "field": "name",
+                  "notEquals": "master"
+                }
+              ]
+            },
+            "then": {
+              "details": {
+                "deployment": {
+                  "properties": {
+                    "mode": "incremental",
+                    "parameters": {
+                      "serverName": {
+                        "value": "[field('fullname')]"
+                      },
+                      "shortTermRetention": {
+                        "value": "[parameters('retentionDays')]"
+                      }
+                    },
+                    "template": {
+                      "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+                      "contentVersion": "1.0.0.0",
+                      "parameters": {
+                        "serverName": {
+                          "type": "string"
+                        },
+                        "shortTermRetention": {
+                          "type": "string"
+                        }
+                      },
+                      "resources": [
+                        {
+                          "apiVersion": "2017-10-01-preview",
+                          "name": "[concat(parameters('serverName'),'/default')]",
+                          "properties": {
+                            "retentionDays": "[parameters('shortTermRetention')]"
+                          },
+                          "type": "Microsoft.Sql/servers/databases/backupShortTermRetentionPolicies"
+                        }
+                      ]
+                    }
+                  }
+                },
+                "existenceCondition": {
+                  "equals": "[parameters('retentionDays')]",
+                  "field": "Microsoft.Sql/servers/databases/backupShortTermRetentionPolicies/retentionDays"
+                },
+                "name": "default",
+                "roleDefinitionIds": [
+                  "/providers/Microsoft.Authorization/roleDefinitions/9b7fa17d-e63e-47b0-bb0a-15c516ac86ec"
+                ],
+                "type": "Microsoft.Sql/servers/databases/backupShortTermRetentionPolicies"
+              },
+              "effect": "[parameters('effect')]"
+            }
+          }
+        },
+        "type": "Microsoft.Authorization/policyDefinitions"
+      }
+    }
+  }
+}
